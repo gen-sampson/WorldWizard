@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>World Wizard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Welcome to the World Wizard!</h1>
+    <form class="form-center" action="/search" method="post">
+      <label>Search for a country:</label>
+      <%- countries %>
+      <br />
+      <br />
+      <br />
+      <input type="submit" value="Load Info" />
+      <br />
+      <br />
+      <input
+        type="submit"
+        value="View Coolness Score"
+        formaction="/coolness"
+        formmethod="post"
+      />
+      <br />
+      <br />
+      <input
+        type="submit"
+        value="Boost Coolness"
+        formaction="/boost"
+        formmethod="post"
+      />
+      <br />
+      <img class="world" src="world.png" />
+    </form>
+  </body>
+</html>
